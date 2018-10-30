@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Linux Mint</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
+ td
+ {
+  padding: 5px;
+ }
+  .jumbotron
+  {
+    margin: 10px;
+    padding-bottom: 340px;
+  
+    background-image: url("linuxbackground.jpg") ;
+  background-size: 100% 100%;
+   }
+  body {
+      position: relative; 
+
+  }
+ 
+  
+  </style>
+  <script>
+$(document).ready(function(){
+    
+        $("#more").hide();
+   
+    $("#show").click(function(){
+        $("#more").show();
+        $("#show").hide();
+
+    });
+     $("#hide").click(function(){
+        $("#more").hide();
+        $("#show").show();
+  
+    });
+});
+</script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<div  class="jumbotron text-center" style="margin-bottom:0">
+
+</div>
+<!---->
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top " style=" padding:auto;">
+      <li class="nav-item">
+      <a class="nav-link" href="index.html">Strona główna </a>
+    </li>
+    <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="#section1">O linuxie </a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="#section2">Podstawowe pojęcia</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="#section3">Terminal</a>
+    </li>
+       <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Przydatne linki
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="https://www.linuxmint.pl/">Linux mint polska</a>
+        <a class="dropdown-item" href="https://www.linuxmint.com/">Linux mint</a>
+        <a class="dropdown-item" href="https://linuxiarze.pl/">Strona poświęcona linuxom</a>
+      </div>
+    </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">O Mnie</button>
+      </li>
+    </ul>
+  </nav>
+<!--Informacje o mnie w oknie modalnym-->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" style="text-align: center;">Witaj</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+      </div>
+      <div class="modal-body">
+        <p>Jestem Marcin, stworzyłem tą stronę abyś równiesz mógł zaznajomić się z podstawami obsługi linuxa. W razie pytań pisz maila na adres: <br />
+        <b>marcinzwazek@gmial.com</b> <br />
+        lub na facebooku <br />
+        <a href="https://www.facebook.com/marcin.zwiazek.1">Marcin Zwazek</a>
+      </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Zamknij</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      
+<!--Strona główna-->
+
+<div id="section1" class="container-fluid" style="padding-top:70px;padding-bottom:70px" class="container" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>Historia linuxa</h2>
+      <h5>Linux </h5>
+      <div class="fakeimg">
+        <p>Pierwsza wersja jądra Linux została udostępniona publicznie 17 września 1991 dla architektury komputera PC, wykorzystującego mikroprocesor o architekturze IA-32. Do jądra dołączono narzędzia systemowe zwane też „Development Kit” oraz biblioteki z projektu GNU, aby otrzymać nadający się do użytku system operacyjny. Z tego powodu powstała też alternatywna nazwa kompletnego systemu: GNU/Linux. Obecnie jest on udostępniany w formie licznych dystrybucji Linuksa, które składają się z jądra (niekiedy zmodyfikowanego w stosunku do oficjalnej wersji) i zestawu pakietów oprogramowania dobranego do różnorodnych wymagań. Dystrybucje zawierają głównie oprogramowanie na licencjach FLOSS, jednak najczęściej zawierają też lub pozwalają na łatwe doinstalowanie pewnej liczby programów na licencjach własnościowych.</p>
+        <a  id="show" style="text-decoration-line: underline; cursor:pointer; color: blue">Przeczytaj więcej</a>
+        
+        <p id="more">
+        Historia Linuksa rozpoczęła się w 1991 roku, kiedy to fiński programista, Linus Torvalds poinformował o hobbystycznym tworzeniu przez siebie niedużego, wolnego systemu operacyjnego, przeznaczonego dla procesorów z rodzin i386 oraz i486.
+        Linus stworzył jednak tylko jądro, pełny system operacyjny potrzebował jeszcze powłoki systemowej, kompilatora, bibliotek itp. W roli większości z tych narzędzi użyto oprogramowania GNU[9], co jednak w przypadku niektórych komponentów systemu wymagało poważnych zmian, niekiedy finansowanych przez Projekt GNU[10], niekiedy dokonanych już wcześniej przez Linusa Torvaldsa.
+        Dużo pracy wymagało także zintegrowanie systemu do postaci dystrybucji[12], które umożliwiały zainstalowanie go w stosunkowo prosty sposób. Jednymi z pierwszych były opublikowany 16 lipca 1993 Slackware Linux czy założony miesiąc później Debian, nazywający siebie GNU/Linux.
+        Sama nazwa pochodzi ze zbitki słów Linus (będącego imieniem twórcy) i Unix. Później pojawiło się też rozwinięcie nazwy Linux w akronim rekurencyjny Linux Is Not UniX.
+        Twórcą nazwy Linux był Ari Lemmke. Nie podobała mu się nazwa Freax, więc gdy udostępnił Torvaldsowi na serwerze ftp://ftp.funet.fi katalog dla źródeł systemu, nazwał go właśnie Linux. W lutym 1992 założył on również grupę dyskusyjną comp.os.linux w głównej hierarchii Usenetu, która miała przejąć ruch z grupy alt.os.linux działającej od stycznia 1992 w hierarchii alternatywnej. Obie grupy istnieją do tej pory.
+        Rada Języka Polskiego proponuje dwojaką pisownię nazwy „Linux” przy odmianie przez przypadki. Rozróżnienie to polega albo na zastąpieniu -x polskim -ks (sposób I), albo na zachowaniu końcówki -x (sposób II)[18]:
+        Część osób preferuje nazwę „GNU/Linux” zamiast samego „Linux”. Ta pierwsza jest promowana przez Free Software Foundation i Projekt GNU, gdyż sam Linux nie tworzy systemu operacyjnego – do tego potrzebne jest również tzw. środowisko userspace, które właśnie zapewnia Projekt GNU.
+        Maskotką i nieoficjalnym logo Linuksa jest uśmiechnięty pingwin Tux.
+        <br /><i><a href="https://pl.wikipedia.org/wiki/Linux" >Źródło</a></i>
+        </p>
+      </div>
+       <a  id="hide" style="text-decoration-line: underline; cursor:pointer; color: blue">Zwiń</a>
+
+      
+   </div>
+      <div class="col-sm-8">
+      <h2>Wszystko o linuxie MINT </h2>
+      <h5>Linux main krótki wstęp</h5>
+   <p>
+     <b>Linux Mint</b> – dystrybucja systemu GNU/Linux oparta na Ubuntu oraz Debianie, skierowana do początkujących użytkowników. Dystrybucja kładzie nacisk na prostotę użytkowania, przydatne aplikacje i pełne ich wsparcie zaraz po instalacji. Twórcy zadbali o dodanie wielu graficznych nakładek. Na standardowej płycie instalacyjnej znajduje się większość popularnego własnościowego oprogramowania - wtyczka Adobe Flash Player, Java oraz duży zbiór kodeków audio i wideo pozwalających odtworzyć wszystkie popularne pliki muzyczne i filmowe, nawet korzystając z wersji Live CD (w Ubuntu takie oprogramowanie trzeba zainstalować samodzielnie).
+     Pomimo faktu, iż dystrybucja jest oparta głównie na Ubuntu, twórcy Minta odcinają się od jego ideologii. Krytykują Ubuntu przede wszystkim za konserwatywne, według nich, trzymanie się idei wolnego oprogramowania, przez co większość popularnych formatów audio, wideo oraz zamknięte technologie są w Ubuntu domyślnie niedostępne.
+     Mint jako dystrybucja oparta również na Debianie jest bardzo solidna i daje użytkownikom dostęp do dużego zbioru pakietów oprogramowania. Aktualnie repozytorium Minta zawiera ponad 100 tys. pakietów. Choć Mint bazuje również na kodzie i repozytorium Ubuntu, idzie swoją własną drogą rozwoju.
+     Istnieje kilka wersji tego systemu, które są wydawane w różnych cyklach wydawniczych:
+     <ul>
+     <li>Main Edition - jest to standardowa, oficjalna edycja Minta. Można ją uruchomić w trybie Live. Domyślne środowisko to Cinnamon lub MATE (wcześniej GNOME), ale są też wersje zaopatrzone w KDE, Xfce, LXDE, Fluxbox[1]. Jednak są one wypuszczane parę miesięcy później w stosunku do wersji ze środowiskiem Cinnamon. Wersja Main wydawana jest zarówno w rozmiarze płyty CD, czyli przeważnie ok. 700 MiB, jak i DVD (ok. 4 GiB). Posiada pełne wsparcie multimediów oraz oprogramowanie o zamkniętym (m.in. chronionym patentami) kodzie (np. flash, realplayer). Rozpowszechnianie tej wersji w krajach, gdzie to domyślnie instalowane oprogramowanie jest chronione patentami, może napotkać problemy. Wersja DVD zawiera dodatkowe oprogramowanie, takie jak Java, VLC, F-Spot, OpenOffice.org-base, Samba, tapety i dodatkowe czcionki ttf-dejavu.</li>
+     <li>No codecs edition (dawne Universal Edition) - Wersja różniąca się od Main brakiem elementów dostępnych na niewolnej licencji, co za tym idzie może być ona dowolnie dystrybuowana w krajach, w których oprogramowanie zawarte w Main jest chronione patentami. (np. Stany Zjednoczone, Japonia)
+     </li>
+     <li>OEM - wersja przeznaczona dla producentów, którzy zaopatrują komputery w preinstalowany system Linux Mint (podobnie jak Windows 7 czy 8 w laptopach).
+     </li>
+    <li>Linux Mint Debian Edition (LMDE) - nowa wersja Minta oparta całkowicie na Debianie i jego repozytorium. Według informacji twórców, ma dziedziczyć po Debianie takie cechy jak stabilność, szybkość i responsywność. Ponadto nie wymusza na użytkowniku instalowania nowszych wersji ani nawet upgrade'ów, wystarczy aktualizacja pakietów.
+    </li>
+    <li>Linux Mint Xfce - wersja z lekkim środowiskiem graficznym Xfce.</li>
+    <li>Linux Mint KDE - wersja z środowiskiem graficznym KDE.</li>
+ </ul>
+Wszystkie wersje są dostępne zarówno na architekturę i386, jak i AMD64.
+<b>Środowisko graficzne</b>
+Domyślnym środowiskiem graficznym Minta w wersji Main jest Cinnamon lub MATE (wcześniej GNOME), ale są też wersje oparte o środowiska KDE i Xfce.
+Domyślne środowiska graficzne w Linux Mint 17 LTS (2014) i LMDE 201403  Cinnamon  MATE  KDE   Xfce  GNOME   LXDE  Fluxbox
+Twórcy Linux Mint skupiają się na użyteczności dystrybucji na komputerze domowym oraz przyjaznym stosunku do użytkowników początkujących. Dlatego właśnie większość popularnych technologii, pomimo zamkniętego kodu i restrykcji związanych z prawem patentowym, działa po instalacji in-of-the-boxes. W wersji 8.1 o nazwie "Isadora" przywrócono na płycie specjalny program mint4win, pozwalający na zainstalowanie w pełni funkcjonalnego systemu z poziomu Windows tak, jakby instalowało się zwykłą aplikację. Podobny program posiada Ubuntu (WUBI) oraz Debian. Do szybkiej aktualizacji systemu oraz instalowania nowego oprogramowania Linux Mint wykorzystuje znany z Debiana system zarządzania pakietami APT.
+Niektóre aplikacje charakterystyczne dla Linux Mint
+Menedżer aktualizacji Mintupdate
+Mint nie jest forkiem Ubuntu. Różni się kilkoma niestandardowymi rozwiązaniami:
+<ul>
+    <li>mintMenu – rozbudowane menu dla środowiska graficznego GNOME, przypomina w wyglądzie i funkcjonowaniu menu z Windows Vista, Pozwala w pełni dostosować tekst, ikony i kolor menu.</li>
+
+    <li>mintDesktop – narzędzie służące do konfiguracji środowiska GNOME. Pozwala m.in. na zmianę ikon wyświetlanych na pulpicie, czy efektów graficznych.</li>
+
+   <li> mintWifi – narzędzie umożliwiające łatwą instalację sterowników i konfigurację bezprzewodowych kart sieciowych Wi-Fi</li>
+
+    <li>mintBackup – narzędzie pozwalające na tworzenie kopii zapasowych plików użytkownika</li>
+
+    <li>mintInstall – menedżer oprogramowania, pozwalający na instalację programów z repozytorium systemowego, aplikacja zawiera ranking z ocenami programu oraz recenzje dodawane przez użytkowników</li>
+
+    <li>mintUpdate – aplikacja służąca to aktualizacji systemu operacyjnego, zawiera klasyfikację ważności aktualizacji</li>
+
+    <li>mintUpload – narzędzie pozwalające na wysyłanie plików na serwery za pomocą protokołu FTP (+HTP).</li></ul></p>
+  
+</div>
+</div>
+<div id="section2" class="container-fluid" style="padding-top:70px;padding-bottom:70px" class="container" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-4">
+      <h2>Struktura Katalogów</h2>
+      <ul>
+        <li><b> /boot </b>-Katalog zawierający pliki niezbędne do uruchomienia systemu operacyjnego</li>
+        <li><b> /etc </b>-Katalog zawierający pliki konfiguracyjny odpowiadające za sposób w jaki działa system operacyjny</li>
+        <li><b> /root </b>-Katalog administratorski</li>
+        <li><b> /home </b>-Katalog zawierający prywatne pliki użytkowników, każdy użytkownik ma własny katalog HOME</li>
+        <li><b> /dev </b>-Katalog zawierający odnośniki do urządzeń zamontowanych w systemie</li>
+        <li><b> /lib </b>-Katalog zawierający biblioteki z procedurami</li>
+        <li><b> /proc </b>-Pseudokatalog zawierający pliki vz zaawansowaną konfiguracją oraz diagnostyką, jest tworzony zawsze po starcie systemu   </li>
+        <li><b> /sys </b>-Pseudokatalog który jest tworzony zawsze po starcie systemu zawierajacy ustrukturyzowaną reprezentację stanu systemu </li>
+        <li><b> /bin </b>-Katalog zawierający narzedzia służące do administracji systemem</li>
+        <li><b> /tmp </b>-Katalog zawierający pliki tymczasowe</li>
+        <li><b> /var </b>-Katalog zawierający pliki z których korzystają uruchomione programy</li>
+        <li><b> /lost+found </b>-Katalog zawierający pliki które zostały odtworzone po utracie np zasialania</li>
+        <li><b> /opt </b>-Katalog zawierający pliki które są zaimplementowane przez użytkownika</li>
+        <li><b> /usr </b>-Katalog zawierający pliki , programy, moduły i biblioteki dostępne dla użytkowników </li>
+      </ul>
+    </div>
+    <div class="col-sm-8">
+      <h2>Słowniczek </h2>
+      <h5>Słownictwo związane z obsługą linuxa</h5>
+      <table border="5">
+         <tr>
+           <td>Terminal</td> <td>Program służący do komunikacji z użytkownikiem poprzez wydawanie komend. Użytkownik wydaje komendy system je interpretuje i wykonuje. </td>
+         </tr>
+      <tr>
+        <td>Katalog</td> <td>Odpowiednikiem katalogu w systemie windows jest folder. Służy on do grupowania np plików</td>
+      </tr>
+      <tr>
+        <td>Jądro</td> <td>obsługuje dzielone biblioteki, pamięć wirtualną, wątkikryptografie, sieć (firewall), gen. liczb losowych
+            o otwartym kodzie źródłowym (język C)</td>
+      </tr>
+      <tr>
+        <td>Pakiet</td> <td>skompilowane i skompresowane  źródła programów, dzięki temu proces instalacji oprogramowania na linuxie jest znacznie krótszy niż np w windowsie. </td>
+      </tr>
+      <tr>
+        <td>Powłoka</td> <td>program komputerowy pełniący rolę pośrednika pomiędzy systemem operacyjnym lub aplikacjami a użytkownikiem, przyjmując jego polecenia i „wyprowadzając” wyniki działania programów.</td>
+      </tr>
+      
+      </table>
+
+  </div>
+  
+</div>
+
+</div>
+<div id="section3" class="container-fluid" style="padding-top:70px;padding-bottom:70px" class="container" style="margin-top:30px">
+  <div class="row">
+    <div class="col-sm-12">
+      <header style="text-align: center;">
+      <h2>Terminal</h2>
+      <h5>Wszystko co o obsłudze terminala powinieneś wiedzieć  </h5>
+      </header>
+     <article>
+      <p>Osobiście częściej korzystam z konsoli jest ona poprostu dla mnie wygodniejsza oraz daje mi większe możliwości. Dzięki terminalowi możemy instalować oprogramowanie np <b>ap-get install <i>nazwa pakietu</i></b>, konsola potrafi także: 
+        <ol>
+          <ul><b>nawigować pomiędzy katalogami</b></ul>
+          <li> <b>CD <i>nazwa folderu</i></b> -Przejscie do katalogu nazwa folderu</li>
+          <li> <b>CD .. </b> -Przejscie do katalogu nadrzędnego</li>
+          <li> <b>MKDIR<i>nazwa folderu</i></b> -Stworzenie katalogu</li>
+          <li> <b>RMDIR<i>nazwa folderu</i></b> -Usunięcie katalogu</li>
+          <li> <b>LS</b> -Podgląd wszystkich plików oraz katalogów w folderze w którym obecnie się znajdujemy</li>
+        </ol>
+    </ul>
+    <ol>
+       <ul><b>otwierać pliki tektowe</b></ul>
+          <li> <b>nano </b><i> nazwa pliku</i></b>- za pomocą edytora tekstowego nano następuje otwarcie w konsoli pliku</li>
+          <li> <b>cp <i>źródło</i> , <i>cel</i></b> skopiowanie pliku tekstowego w miejsce cel</li>
+          <li> <b>rm <i>nazwa pliku</i></b> usunięcie pliku</li>
+
+    </ol>
+    <ol>
+       <ul><b>Archiwizacja plików</b></ul>
+          <li> <b>tar </b><i> opcja</i>,</b><i> nazwa archiwum</i></b>- dzięki temu poleceniu możemy w polu opcji wstawić:  <b>C</b> utworzenie nowego archiwum, <b> X </b>Wydobycie plików z istniejącego archiwum, <b> T </b>Wyświetlenie listy plików w archiwum</li>          
+    </ol>
+     <ol>
+          <ul><b>zarządzać kontami użytkowników</b></ul>
+          <li> <b>WHOAMI </b> -Pokazuje nazwę aktualnie zalogowanego użytkownika</li>
+          <li> <b>SU </b> -Chwilowe uzyskanie praw administratorskich (root)</li>
+          <li> <b>USER ADD <i>nazwa</i></b> Dodanie nowego użykownika polecenie to może przyjmować argumenty: <b>-g </b><i> nazwa </i>wybór grupy do której będzie należał użytkownik<, <b>-m </b> utworzenie katalogu domowego dla użytkownika/li>
+          <li> <b>USERDEL <i>nazwa</i></b> -Usunięcie użytkownika, z parametrem <b> -r</b> usuwa katalog domowy użytkownika</li>
+          <li> <b>GROUPS </b><i> nazwa </i> wyświetlenie grup użytkownika </li>
+          <li> <b>PASSWD </b><i> nazwa </i> Zmiana hasła dla danego konta </li>
+          <li> <b>GROUPSADD </b><i> nazwa </i> Dodanie grupy użytkowników </li>
+          <li> <b>GROUPSDEL </b><i> nazwa </i> Usunięcie grupy użytkowników </li>
+        </ol>
+         <ol>
+          <ul><b>Kontrolować prawa dostępu do pliku</b></ul>
+          <li> <b>CHOWN </b><i> konto </i>, <i>nazwa</i> -Nadanie praw właściciela pliku kontu</li>
+          <li> <b>CHMOD </b><i> prawa </i>, <i>nazwa</i> - nadanie określonych praw użytkownikowi. Prawa nadaje się za pomocą 3 cyfrowego kodu od 0-7, 0 to brak dostępu, 7 dostęp całkowity  </li>
+        </ol>
+     </article>
+    </div>
+   </div>
+</div>
+<footer>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark"  >
+    <ul class="navbar-nav  navbar-collapse collapse justify-content-center" style="text-align: center;">
+      <li class="nav-item"  >
+          <ul>
+           <a class="nav-link" href="index.html" style="color: brown; " >Strona główna </a>
+            <li class="nav-item">
+            <a class="nav-link" href="#section1">O linuxie </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#section2">Podstawowe pojęcia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section2">Terminal</a>
+            </li>
+          </ul>
+      </li>
+      <ul>
+           <a class="nav-link"  style="color: brown; " >Przydatne linki </a>
+            <li class="nav-item">
+            <a class="nav-link" href="https://www.linuxmint.pl/">Linux mint polska</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="https://www.linuxmint.com/">Linux mint</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://linuxiarze.pl/">Strona poświęcona linuxom</a>
+            </li>
+          </ul>
+     <ul>
+           <a class="nav-link" style="color: brown; " >O Mnie  </a>
+            <li class="nav-item">
+            <li class="nav-link" data-toggle="modal" data-target="#myModal">O Mnie</button>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link"><b>Adres E-Mail: marcinzwazek@gmail.com</b> </a>
+            </li>
+            <li class="nav-item">
+             <a href="https://www.facebook.com/marcin.zwiazek.1">Marcin Zwazek</a>
+            </li>
+          </ul>
+         
+        </li>
+    </ul>
+  </nav>
+  
+   
+
+</footer> 
+  
+</div>
+
+</body>
+</html>
